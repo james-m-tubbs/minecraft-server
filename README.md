@@ -2,7 +2,7 @@
 
 Target for ubuntu 20
 
-### Commands (as root)
+### Set up the Server (as root)
 - `mkdir /opt/minecraft`
 - `useradd minecraft`
 - `wget -O /opt/minecraft/server.jar https://launcher.mojang.com/v1/objects/35139deedbd5182953cf1caa23835da59ca3d7cd/server.jar` 
@@ -17,5 +17,17 @@ Target for ubuntu 20
   - from https://github.com/sladkoff/minecraft-prometheus-exporter/releases/tag/v2.2.0
 - `wget -O /opt/minecraft/plugins/geyser.jar https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar`
   - from: https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/
-- `chmod -R minecraft:minecraft /opt/minecraft`
+- !!Add your own plugins here!!
+  
+### Set up iptables
+- `mkdir /opt/minecraft/scripts`
+- `wget -O /opt/minecraft/scripts/iptables.sh https://raw.githubusercontent.com/james-m-tubbs/minecraft-server/main/iptables.sh`
+- `chmod +x iptables.sh`
+- `/opt/minecraft/plugins/iptables.sh`
+- `chown -R minecraft:minecraft /opt/minecraft/
+
+### Set up Node Exporter (optional)
+- 
+
+### Validation
 
