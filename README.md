@@ -15,5 +15,7 @@ Target for ubuntu 20
 - `mkdir /opt/minecraft/plugins`
 - `wget -O /opt/minecraft/plugins/minecraft-prometheus-exporter-2.2.0.jar https://github.com/sladkoff/minecraft-prometheus-exporter/releases/download/v2.2.0/minecraft-prometheus-exporter-2.2.0.jar`
   - from https://github.com/sladkoff/minecraft-prometheus-exporter/releases/tag/v2.2.0
-- `wget -O /opt/minecraft/plugins/geyser.jar https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar
+- `wget -O /opt/minecraft/plugins/geyser.jar https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar`
   - from: https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/
+- `chmod -R minecraft:minecraft /opt/minecraft`
+
