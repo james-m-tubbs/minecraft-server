@@ -18,16 +18,24 @@ Target for ubuntu 20
 - `wget -O /opt/minecraft/plugins/geyser.jar https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar`
   - from: https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/
 - !!Add your own plugins here!!
+- `mkdir /opt/minecraft/logs
   
 ### Set up iptables
 - `mkdir /opt/minecraft/scripts`
 - `wget -O /opt/minecraft/scripts/iptables.sh https://raw.githubusercontent.com/james-m-tubbs/minecraft-server/main/iptables.sh`
-- `chmod +x iptables.sh`
-- `/opt/minecraft/plugins/iptables.sh`
-- `chown -R minecraft:minecraft /opt/minecraft/
+- `chmod +x /opt/minecraft/scripts/iptables.sh`
+- `/opt/minecraft/scripts/iptables.sh`
 
 ### Set up Node Exporter (optional)
 - 
 
+### Fix Permissions
+- `chown -R minecraft:minecraft /opt/minecraft/
+
+### Add Service
+
 ### Validation
+hit server on:
+- `:9225`
+- `:9100`
 
