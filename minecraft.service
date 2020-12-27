@@ -1,0 +1,14 @@
+[Unit]
+Description=minecraft server
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=300
+User=minecraft
+WorkingDirectory=/opt/minecraft
+ExecStart=/usr/bin/java -Xmx3800M -Xms3800M -jar spitgot.jar nogui
+
+[Install]
+WantedBy=multi-user.target
