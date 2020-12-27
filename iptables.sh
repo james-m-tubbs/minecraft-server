@@ -13,8 +13,8 @@
  iptables -A INPUT -p tcp --dport 22 -j ACCEPT
  iptables -A INPUT -p tcp --dport 25565 -j ACCEPT
  iptables -A INPUT -p udp --dport 19132 -j ACCEPT
- iptables -A INPUT -p udp --dport 9100 -j ACCEPT
- iptables -A INPUT -p udp --dport 9225 -j ACCEPT
+ iptables -A INPUT -p tcp --dport 9100 -j ACCEPT
+ iptables -A INPUT -p tcp --dport 9225 -j ACCEPT
 
 #
 # Set default policies for INPUT, FORWARD and OUTPUT chains
